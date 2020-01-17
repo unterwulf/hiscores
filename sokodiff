@@ -1,0 +1,4 @@
+#!/bin/sh
+me=${0##*/}
+mydir=${0%$me}
+awk -F'\t+' 'NF != 3 || $2 != $3 { print }' $mydir/sokojava1.tab
